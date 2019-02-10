@@ -9,10 +9,18 @@ const Home = () => (
       <a id="headerLink" href="index">densys.org</a> 
 
     <div id="menu">
-       <li href="about">about</li>
-       <li href="analysis">analyses</li>
-       <li href="papers">papers</li>
-       <li href="https://github.com/maxrousseau/densys.org">source</li>
+	<Link href="/about">
+       <li><a href=''>about</a></li>
+	</Link>
+	<Link href="/analysis">
+       <li><a href=''>analyses</a></li>
+	</Link>
+	<Link href="/papers">
+       <li><a href=''>papers</a></li>
+	</Link>
+	<Link href="https://github.com/maxrousseau/densys.org">
+       <li><a href="https://github.com/maxrousseau/densys.org">source</a></li>
+	</Link>
     </div>
 
     <div id="main">

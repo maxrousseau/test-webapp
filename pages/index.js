@@ -92,7 +92,7 @@ li:hover {
 	color: #069;
 	background-color: #bcb9d3;
 	padding: 0.7ex;
-	font-size: 0.5em;
+	font-size: 0.45em;
 	display: blocks;
 	text-align: center;
 }
@@ -100,7 +100,7 @@ li:hover {
 #main {
 
 	clear: both;
-	color: #484558; /*#666;*/
+	color: #746f91; /*#666;*/
 	/*text-shadow: 1px 1px #fff;*/
 	font-size: 0.5em; /*1.7em;*/
 
@@ -110,7 +110,7 @@ li:hover {
 	clear: both;
 	color: #666;
 	border-top: 1px solid #ccc;
-	font-size: 50%;
+	font-size: 37%;
 	padding: 1em;
 	margin: 0 0 1.5em 0;
 }

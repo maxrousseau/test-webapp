@@ -4,88 +4,118 @@ import Head from '../components/head'
 import Nav from '../components/nav'
 
 const Home = () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+    <div id="header">
+      <a id="headerLink" href="index">densys.org</a> 
 
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
-      </div>
+    <div id="menu">
+       <li href="about">about</li>
+       <li href="analysis">analyses</li>
+       <li href="papers">papers</li>
+       <li href="https://github.com/maxrousseau/densys.org">source</li>
     </div>
 
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
+    <div id="main">
+      <p>Research, implementation and dissemination of machine learning 
+	  tools in dentistry.</p>
+    </div>
+
+    <div id="footer">
+      <span class="right"> &copy; 2018 densys.org | Maxime Rousseau </span>
+	</div>
+
+
+    <style jsx global>{`
+
+/* #eae9f1 pale
+ * #bcb9d3
+ * #918cb6
+ * #746f91
+ * #484558 dark
+ */
+
+
+body {
+
+	background-color: #eae9f1; /*pale blue*/
+	color: #746f91; /*dark blue*/ 
+	font-family: sans-serif;
+	margin-top: 3%;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+a {
+
+	color: #484558; /**/
+	text-decoration: none;
+
+}
+
+a:hover {
+
+	background-color: #eae9f1;
+
+}
+
+li {
+
+	color: #484558; /**/
+	text-decoration: none;
+	padding-left: 0.20em;
+	padding-right: 0.20em;
+	padding-top: 0.35em;
+	padding-bottom: 0.45em;
+	display: inline;
+
+}
+
+li:hover {
+
+	background-color: #eae9f1;
+
+}
+
+#header {
+
+	clear: both;
+	color: #484558; /*#666;*/
+	/*text-shadow: 1px 1px #fff;*/
+	font-size: 2em; /*1.7em;*/
+
+}
+
+#menu {
+	clear: both;
+	overflow: hidden;
+	color: #069;
+	background-color: #bcb9d3;
+	padding: 0.7ex;
+	font-size: 0.5em;
+	display: blocks;
+	text-align: center;
+}
+
+#main {
+
+	clear: both;
+	color: #484558; /*#666;*/
+	/*text-shadow: 1px 1px #fff;*/
+	font-size: 0.5em; /*1.7em;*/
+
+}
+
+#footer {
+	clear: both;
+	color: #666;
+	border-top: 1px solid #ccc;
+	font-size: 50%;
+	padding: 1em;
+	margin: 0 0 1.5em 0;
+}
     `}</style>
-  </div>
+    </div>
 )
 
 export default Home

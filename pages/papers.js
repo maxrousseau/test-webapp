@@ -14,10 +14,10 @@ const Home = () => (
        <li><a href=''>about</a></li>
 	</Link>
 	<Link href="/analysis">
-       <li><a href=''><b>analyses</b></a></li>
+       <li><a href=''>analyses</a></li>
 	</Link>
 	<Link href="/papers">
-       <li><a href=''>papers</a></li>
+       <li><a href=''><b>papers</b></a></li>
 	</Link>
 	<Link href="https://github.com/maxrousseau/densys.org">
        <li><a href="https://github.com/maxrousseau/densys.org">source</a></li>
@@ -26,12 +26,13 @@ const Home = () => (
 
     <div id="main">
       <p className="description">
-        Upload an image and select your analysis.
+	<Link href="http://joss.theoj.org/papers/10.21105/joss.00855">
+	M. Rousseau and J.M. Retrouvey. “pfla: A Python Package for Dental Facial
+	Analysis using Computer Vision and Statistical Shape Analysis”. In: Journal
+	of Open Source Software 3.32 (Dec. 2018), p. 855.  DOI :
+	10.21105/joss.00855. URL : https://doi.org/10.21105%2Fjoss.00855.
+	</Link>
       </p>
-
-      <div id="form">
-        <AnalysisForm />
-      </div>
     </div>
 
     <div id="footer">
@@ -116,11 +117,11 @@ li:hover {
 	clear: both;
 	color: #746f91; /*#666;*/
 	/*text-shadow: 1px 1px #fff;*/
-	font-size: 0.5em; /*1.7em;*/
-	text-align: center;
+	font-size: 0.4em; /*1.7em;*/
 	padding-top: 3ex;
 	padding-bottom: 3ex;
-
+	padding-left: 20ex;
+	padding-right: 20ex;
 }
 
 #footer {

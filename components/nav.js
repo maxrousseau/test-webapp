@@ -3,23 +3,20 @@ import Link from 'next/link'
 
 const Nav = () => (
   <nav>
-    <ul>
-      <li>
-        <Link prefetch href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link prefetch href="/about">
-          <a>About</a>
-        </Link>
-      </li>
-      <li>
-        <Link prefetch href="/analysis">
-          <a>Analysis</a>
-        </Link>
-      </li>
-    </ul>
+  <div id="menu">
+<Link href="/about">
+     <li><a href=''>about</a></li>
+</Link>
+<Link href="/analysis">
+     <li><a href=''>analyses</a></li>
+</Link>
+<Link href="/papers">
+     <li><a href=''>papers</a></li>
+</Link>
+<Link href="https://github.com/maxrousseau/densys.org">
+     <li><a href="https://github.com/maxrousseau/densys.org">source</a></li>
+</Link>
+  </div>
 
     <style jsx>{`
       :global(body) {

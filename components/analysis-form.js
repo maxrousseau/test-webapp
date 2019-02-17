@@ -4,7 +4,9 @@ import {analyseImage} from 'api/pfla'
 
 class AnalysisForm extends React.Component {
   state = {
-    file: null
+    file: null,
+    type: null,
+    image_64: null
   }
 
   handleImageChange = (event) => {
@@ -15,22 +17,29 @@ class AnalysisForm extends React.Component {
 
   handleAnalysis = async (event) => {
     event.preventDefault();
-    const {file} = this.state;
+    const {file, type} = this.state;
     const {success: uploadSuccess, url: imageUrl} = await uploadFile(file);
 
     if (!uploadSuccess) return;
 
     this.setState({imageUrl});
 
-    //const {success: analyseSuccess, result} = await analyseImage(type, imageUrl);
-    //this.setState({result});
+    const {image_64} = await analyseImage(type, imageUrl);
+    this.setState({image_64});
   }
 
   render() {
-      const {file, imageUrl} = this.state;
+      const {name}= this.props;
+      const {file, imageUrl, image_64} = this.state;
+
+      const base_64_string = "data:image/png;base64," + image_64;
 
       return (
         <form onSubmit={this.handleAnalysis}>
+
+          // DROPDOWN
+          onChange() => this.setState({type})
+
           <div>
             <label>Select image to analyse</label>
             <input type="file" onChange={this.handleImageChange} />
@@ -43,6 +52,12 @@ class AnalysisForm extends React.Component {
           {imageUrl && (
             <a href={imageUrl}>{imageUrl}</a>
           )}
+
+          {image_64 && (
+            <img alt="Result" src={base_64_string} style="height:836px; width:592px">
+          )}
+
+
 
           <style jsx>{`
             :global(body) {

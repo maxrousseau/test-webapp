@@ -6,25 +6,12 @@ import Nav from '../components/nav'
 const Home = () => (
 
     <div id="header">
-      <a id="headerLink" href="index">densys.org</a> 
+      <a id="headerLink" href="index">densys.org</a>
 
-    <div id="menu">
-	<Link href="/about">
-       <li><a href=''>about</a></li>
-	</Link>
-	<Link href="/analysis">
-       <li><a href=''>analyses</a></li>
-	</Link>
-	<Link href="/papers">
-       <li><a href=''>papers</a></li>
-	</Link>
-	<Link href="https://github.com/maxrousseau/densys.org">
-       <li><a href="https://github.com/maxrousseau/densys.org">source</a></li>
-	</Link>
-    </div>
+
 
     <div id="main">
-      <p>Research, implementation and dissemination of machine learning 
+      <p>Research, implementation and dissemination of machine learning
 	  tools in dentistry.</p>
     </div>
 
@@ -46,7 +33,7 @@ const Home = () => (
 body {
 
 	background-color: #eae9f1; /*pale blue*/
-	color: #746f91; /*dark blue*/ 
+	color: #746f91; /*dark blue*/
 	font-family: sans-serif;
 	margin-top: 3%;
 	margin-left: 10%;

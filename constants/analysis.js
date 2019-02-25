@@ -1,7 +1,7 @@
 export default const ANALYSIS = {
-    ASYM: "ASYM",
-    LFH: "LFH",
-    RATIO_1: "RATIO_1",
-    RATIO_3: "RATIO_2",
-    RATIO_3: "RATIO_3",
+    asym: "asym",
+    lfh: "lfh",
+    ratio1: "ratio1",
+    ratio2: "ratio2",
+    ratio3: "ratio3",
 };

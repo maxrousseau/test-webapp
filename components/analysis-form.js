@@ -4,7 +4,10 @@ import {analyseImage} from 'api/pfla'
 
 class AnalysisForm extends React.Component {
   state = {
-    file: null
+    file: null,
+    type: null,
+    image_64: null,
+    result: null
   }
 
   handleImageChange = (event) => {
@@ -15,30 +18,43 @@ class AnalysisForm extends React.Component {
 
   handleAnalysis = async (event) => {
     event.preventDefault();
-    const {file} = this.state;
+    const {file, type} = this.state;
     const {success: uploadSuccess, url: imageUrl} = await uploadFile(file);
 
     if (!uploadSuccess) return;
 
     this.setState({imageUrl});
 
-    //const {success: analyseSuccess, result} = await analyseImage(type, imageUrl);
-    //this.setState({result});
+      const { image_64 } = await analyseImage(type, imageUrl);
+      this.setState({ image_64 });
   }
 
   render() {
-      const {file, imageUrl} = this.state;
+
+      const { file, imageUrl, type, image_64, result } = this.state;
+      const base_64_string = "data:image/png;base64," + image_64;
 
       return (
         <form onSubmit={this.handleAnalysis}>
+
+          <select id="lang" onChange={this.change} value={this.state.value}>
+            <option value="asym">Asymmetry</option>
+            <option value="lfh">Lower Face Height</option>
+            <option value="ratio1">Ratio 1</option>
+            <option value="ratio1">Ratio 2</option>
+            <option value="ratio1">Ratio 3</option>
+          </select>
+
           <div>
             <label>Select image to analyse</label>
             <input type="file" onChange={this.handleImageChange} />
           </div>
 
+
           {file && (
             <button type="submit">Analyse</button>
           )}
+
 
           {imageUrl && (
             <a href={imageUrl}>{imageUrl}</a>

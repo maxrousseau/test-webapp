@@ -4,9 +4,9 @@ import {PFLA_API_URL} from 'config';
   return new Promise((resolve) => {
     const apiBaseUrl = PFLA_API_URL;
 
-     var url = `${apiBaseUrl}/analyse`;
+    var url = `${apiBaseUrl}/analyse`;
     var xhr = new XMLHttpRequest();
-
+    var fd = new FormData();
 
      xhr.open('POST', url, true);
 
@@ -14,7 +14,7 @@ import {PFLA_API_URL} from 'config';
 
      // Update progress (can be used to show progress indicator)
     xhr.upload.addEventListener("progress", (e) => {
-      console.log(`fileuploadprogress data.loaded: ${e.loaded}, data.total: ${e.total}`);
+        console.log(`fileuploadprogress data.loaded: ${e.loaded}, data.total: ${e.total}`);
     });
 
      xhr.onreadystatechange = (e) => {

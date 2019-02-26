@@ -25,8 +25,8 @@ class AnalysisForm extends React.Component {
 
     this.setState({imageUrl});
 
-      const { image_64 } = await analyseImage(type, imageUrl);
-      this.setState({ image_64 });
+    const { image_base_64 } = await analyseImage(type, imageUrl);
+    this.setState({ image_64: image_base_64 });
   }
 
   render() {
@@ -55,9 +55,12 @@ class AnalysisForm extends React.Component {
             <button type="submit">Analyse</button>
           )}
 
-
           {imageUrl && (
             <a href={imageUrl}>{imageUrl}</a>
+          )}
+
+          {image_64 && (
+            <img href={base_64_string} />
           )}
 
           <style jsx>{`

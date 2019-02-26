@@ -23,7 +23,7 @@ import {PFLA_API_URL} from 'config';
     // https://stackoverflow.com/questions/39519246/make-xmlhttprequest-post-using-json
     // We need to tell XHR that we are send data as JSON content-type
     // =======================================================
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
     // Update progress (can be used to show progress indicator)
     // =======================================================
@@ -31,7 +31,7 @@ import {PFLA_API_URL} from 'config';
     // =======================================================
     //xhr.upload.addEventListener("progress", (e) => {
     //    console.log(`fileuploadprogress data.loaded: ${e.loaded}, data.total: ${e.total}`);
-    //});
+    // });
 
     xhr.onreadystatechange = (e) => {
       if (xhr.readyState !== 4) return;

@@ -3,11 +3,18 @@ import {uploadFile} from 'api/cloudinary'
 import {analyseImage} from 'api/pfla'
 
 class AnalysisForm extends React.Component {
+  // On met comme valeur par défaut le premier élément du select pour le type
   state = {
     file: null,
-    type: null,
+    type: 'asym',
     image_64: null,
     result: null
+  }
+
+  // On doit ajouter un handler pour le changement de type
+  handleTypeChange = (event) => {
+    event.preventDefault();
+    this.setState({type: event.target.value});
   }
 
   handleImageChange = (event) => {
@@ -34,10 +41,12 @@ class AnalysisForm extends React.Component {
       const { file, imageUrl, type, image_64, result } = this.state;
       const base_64_string = "data:image/png;base64," + image_64;
 
+      console.log(type);
+
       return (
         <form onSubmit={this.handleAnalysis}>
 
-          <select id="lang" onChange={this.change} value={this.state.value}>
+          <select id="lang" onChange={this.handleTypeChange} value={type}>
             <option value="asym">Asymmetry</option>
             <option value="lfh">Lower Face Height</option>
             <option value="ratio1">Ratio 1</option>

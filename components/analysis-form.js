@@ -32,7 +32,6 @@ class AnalysisForm extends React.Component {
     this.setState({imageUrl});
 
     const { image_base_64 } = await analyseImage(type, imageUrl);
-    this.setState({ image_64 });
     this.setState({ image_64: image_base_64 });
    }
 
@@ -57,6 +56,8 @@ class AnalysisForm extends React.Component {
           <div>
             <label>Select image to analyse</label>
             <input type="file" onChange={this.handleImageChange} />
+                  <img src={base_64_string} alt="result_img" />
+                  <p> Result: {result} </p>
           </div>
 
 

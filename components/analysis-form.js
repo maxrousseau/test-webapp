@@ -31,16 +31,15 @@ class AnalysisForm extends React.Component {
 
     this.setState({imageUrl});
 
-    const { image_base_64 } = await analyseImage(type, imageUrl);
-    this.setState({ image_64: image_base_64 });
+    const { image_base_64, result } = await analyseImage(type, imageUrl);
+    this.setState({ image_64: image_base_64, result });
    }
 
   render() {
 
       const { file, imageUrl, type, image_64, result } = this.state;
-      const base_64_string = "data:image/png;base64," + image_64;
 
-      console.log(type);
+      const base_64_string = "data:image/png;base64, " + image_64;
 
       return (
         <form onSubmit={this.handleAnalysis}>
@@ -56,8 +55,6 @@ class AnalysisForm extends React.Component {
           <div>
             <label>Select image to analyse</label>
             <input type="file" onChange={this.handleImageChange} />
-                  <img src={base_64_string} alt="result_img" />
-                  <p> Result: {result} </p>
           </div>
 
 
@@ -67,11 +64,21 @@ class AnalysisForm extends React.Component {
 
 
           {imageUrl && (
-            <a href={imageUrl}>{imageUrl}</a>
+            <div>
+              <a href={imageUrl}>{imageUrl}</a>
+            </div>
           )}
 
           {image_64 && (
-               <img href={base_64_string} />
+            <div>
+              <img src={base_64_string} alt="result_img" />
+            </div>
+          )}
+
+          {result && (
+            <div>
+              <p> Result: {result} </p>
+            </div>
           )}
 
           <style jsx>{`

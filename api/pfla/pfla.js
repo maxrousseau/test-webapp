@@ -16,14 +16,26 @@ import {PFLA_API_URL} from 'config';
      xhr.onreadystatechange = (e) => {
       if (xhr.readyState !== 4) return;
 
-      if (xhr.status == 200) {
-        // File uploaded successfully
+      if (xhr.status === 201) {
+        // Got response from backend
         const response = JSON.parse(xhr.responseText);
 
-        const result = response.result;
-        const image_base_64 = response.b64_img;
+        // Same as const job = response.job
+        const {job} = response;
 
-        resolve({success: true, image_base_64, result});
+        // Same as
+        // const b64_img = job.b64_img
+        // const result = job.result
+        const {b64_img, result} = job;
+
+
+        console.log("Following is the encoded base_64 image");
+        console.log("We should be able to copy/paste that on https://codebeautify.org/base64-to-image-converter and see an image")
+        console.log("It doesn't seem to work for me right now")
+        console.log("I don't think the base64 is supposed to start with b' and end with '   ")
+        console.log(b64_img)
+
+        resolve({success: true, image_base_64: b64_img, result});
       } else if (xhr.readyState == 4) {
         resolve({success: false});
       }

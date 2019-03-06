@@ -28,7 +28,7 @@ export const uploadFile = (file) => {
     xhr.onreadystatechange = (e) => {
       if (xhr.readyState !== 4) return;
 
-      if (xhr.status == 200) {
+      if (xhr.status === 200) {
         // File uploaded successfully
         const response = JSON.parse(xhr.responseText);
         const {secure_url} = response;

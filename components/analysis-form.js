@@ -47,8 +47,8 @@ class AnalysisForm extends React.Component {
             <option value="asym">Asymmetry</option>
             <option value="lfh">Lower Face Height</option>
             <option value="ratio1">Ratio 1</option>
-            <option value="ratio1">Ratio 2</option>
-            <option value="ratio1">Ratio 3</option>
+            <option value="ratio2">Ratio 2</option>
+            <option value="ratio3">Ratio 3</option>
           </select>
 
           <div>

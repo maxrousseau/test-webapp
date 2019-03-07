@@ -29,6 +29,7 @@ npm run dev
 TODO
 ----
 - [ ] esthetic improvements
+- [ ] buttons and selectors analysis page
 - [ ] refactoring
 - [ ] documentation
 - [ ] travisCI

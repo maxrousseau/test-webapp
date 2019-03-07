@@ -6,7 +6,7 @@ class AnalysisForm extends React.Component {
   state = {
     file: null,
     type: 'asym',
-    image_64: null,
+      image_64: null,
     result: null
   }
 
@@ -38,7 +38,6 @@ class AnalysisForm extends React.Component {
   render() {
 
       const { file, imageUrl, type, image_64, result } = this.state;
-
       const base_64_string = "data:image/png;base64, " + image_64;
 
       return (

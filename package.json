@@ -1,15 +1,11 @@
 {
   "name": "test-webapp",
   "scripts": {
-    "build": "next build"
-  },
-  "scripts": {
-  "start": "next start"
-  },
-  "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "babel-plugin-module-resolver": "^3.1.3",

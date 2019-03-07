@@ -1,6 +1,12 @@
 {
   "name": "test-webapp",
   "scripts": {
+    "build": "next build"
+  },
+  "scripts": {
+  "start": "next start"
+  },
+  "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"

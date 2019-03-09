@@ -7,7 +7,7 @@ import AnalysisForm from '../components/analysis-form'
 const Home = () => (
 
     <div id="header">
-      <a id="headerLink" href="index">densys.org</a> 
+      <a id="headerLink" href="index">densys.org</a>
 
     <div id="menu">
 	<Link href="/about">
@@ -34,7 +34,7 @@ const Home = () => (
     </div>
 
     <div id="footer">
-      <span class="right"> &copy; 2018 densys.org | Maxime Rousseau </span>
+      <span class="right"> &copy; 2019 densys.org | Maxime Rousseau </span>
 	</div>
 
     <style jsx global>{`
@@ -49,7 +49,7 @@ const Home = () => (
 body {
 
 	background-color: #eae9f1; /*pale blue*/
-	color: #746f91; /*dark blue*/ 
+	color: #746f91; /*dark blue*/
 	font-family: sans-serif;
 	margin-top: 3%;
 	margin-left: 10%;

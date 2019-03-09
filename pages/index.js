@@ -5,10 +5,10 @@ import Nav from '../components/nav'
 
 const Home = () => (
 
-    <div id="header">
-      <a id="headerLink" href="index">densys.org</a> 
+    <div className="header">
+      <a id="headerLink" href="index">densys.org</a>
 
-    <div id="menu">
+        <div className="menu">
 	<Link href="/about">
        <li><a href=''>about</a></li>
 	</Link>
@@ -23,13 +23,14 @@ const Home = () => (
 	</Link>
     </div>
 
-    <div id="main">
-      <p>Research, implementation and dissemination of machine learning 
+        <div className="main">
+            <img src="/static/densyslogo.png" alt="logo" height="400" width="400" />
+      <p>Research, implementation and dissemination of machine learning
 	  tools in dentistry.</p>
     </div>
 
-    <div id="footer">
-      <span class="right"> &copy; 2018 densys.org | Maxime Rousseau </span>
+    <div className="footer">
+      <span className="right"> &copy; 2019 densys.org | Maxime Rousseau </span>
 	</div>
 
 
@@ -46,7 +47,7 @@ const Home = () => (
 body {
 
 	background-color: #eae9f1; /*pale blue*/
-	color: #746f91; /*dark blue*/ 
+	color: #746f91; /*dark blue*/
 	font-family: sans-serif;
 	margin-top: 3%;
 	margin-left: 10%;
@@ -85,7 +86,7 @@ li:hover {
 
 }
 
-#header {
+.header {
 
 	clear: both;
 	color: #484558; /*#666;*/
@@ -94,7 +95,7 @@ li:hover {
 
 }
 
-#menu {
+.menu {
 	clear: both;
 	overflow: hidden;
 	color: #069;
@@ -105,16 +106,17 @@ li:hover {
 	text-align: center;
 }
 
-#main {
+.main {
 
 	clear: both;
 	color: #746f91; /*#666;*/
 	/*text-shadow: 1px 1px #fff;*/
 	font-size: 0.5em; /*1.7em;*/
+    text-align: center;
 
 }
 
-#footer {
+.footer {
 	clear: both;
 	color: #666;
 	border-top: 1px solid #ccc;

@@ -1,8 +1,15 @@
 DENSYS.ORG Frontend
 ===================
 
+<img src="static/densyslogo.png"
+     height="300"
+     width="300"
+     alt="logo"
+     style="text-align: center;" />
+
 This is the front-end of the densys.org web application. NOTE: this project is
 still in its early stages of development.
+
 
 Requirements and Dependencies
 -----------------------------

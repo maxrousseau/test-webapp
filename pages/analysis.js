@@ -35,7 +35,7 @@ const Home = () => (
     </div>
 
     <div id="footer">
-      <span className="right"> &copy; 2018 densys.org | Maxime Rousseau </span>
+      <span className="right"> &copy; 2019 densys.org | Maxime Rousseau </span>
 	</div>
 
     <style jsx global>{`

@@ -1,7 +1,7 @@
 DENSYS.ORG Frontend
 ===================
 
-<div style="text-align:center">
+<div style="text-align:center;">
 <img src="static/densyslogo.png"
      height="300"
      width="300"

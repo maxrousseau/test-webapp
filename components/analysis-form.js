@@ -86,6 +86,36 @@ class AnalysisForm extends React.Component {
               font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
               Helvetica, sans-serif;
             }
+
+
+			input[type=submit] {
+				background-color: #bcb9d3;
+				border: none;
+				color: white;
+				padding: 5px 5px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 12px;
+			}
+
+			button{
+				background-color: #bcb9d3;
+				border: none;
+				color: white;
+				padding: 10px 15px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 15px;
+				vertical-align: middle;
+			}
+
+			button:hover{
+				background-color: #918cb6;
+				color: white;
+			}
+
             nav {
               text-align: center;
             }

@@ -1,12 +1,8 @@
 DENSYS.ORG Frontend
 ===================
 
-<div style="text-align:center;">
-<img src="static/densyslogo.png"
-     height="300"
-     width="300"
-     alt="logo"/>
-</div>
+
+![densys](/static/densyslogo.png?raw=true "densys")
 
 This is the front-end of the densys.org web application. NOTE: this project is
 still in its early stages of development.
